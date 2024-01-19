@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from '@/components/Header/Header.module.css';
 import { RiRobot2Line } from 'react-icons/ri';
 
 const Header = () => {
