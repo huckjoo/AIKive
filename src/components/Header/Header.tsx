@@ -1,10 +1,9 @@
 import styles from '@/components/Header/Header.module.css';
-import { RiRobot2Line } from 'react-icons/ri';
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <RiRobot2Line className={styles.icon} />
+      <span className={styles.logo}>AIKive</span>
     </div>
   );
 };
