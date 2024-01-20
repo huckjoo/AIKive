@@ -1,6 +1,6 @@
 .header {
   border-bottom: 1px solid rgba(0, 27, 55, 0.1);
-  height: 80px;
+  height: 60px;
   padding: 4px;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 .logo {
   margin-left: 16px;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   font-weight: 600;
 }
