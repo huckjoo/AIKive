@@ -1,6 +1,8 @@
 import styles from '@/pages/AIServicePage/AIServicePage.module.css';
+import { useState } from 'react';
 
 const AIServicePage = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const serviceFilter = [
     '전체',
     '이미지AI',
@@ -10,6 +12,9 @@ const AIServicePage = () => {
     '언어모델',
     '기타',
   ];
+  const handleFilter = (index: number) => {
+    setSelectedIndex(index);
+  };
   return (
     <div className={styles.container}>
       {/** TODO: 컴포넌트로 분리 */}
@@ -19,9 +24,14 @@ const AIServicePage = () => {
       </h3>
       <div className={styles.filterContainer}>
         <div className={styles.serviceFilter}>
-          {serviceFilter.map((filterName) => {
+          {serviceFilter.map((filterName, i) => {
             return (
-              <button className={styles.filterButton}>{filterName}</button>
+              <button
+                onClick={() => handleFilter(i)}
+                className={`${styles.filterButton} ${selectedIndex === i ? styles.selectedFilter : ''}`}
+              >
+                {filterName}
+              </button>
             );
           })}
         </div>

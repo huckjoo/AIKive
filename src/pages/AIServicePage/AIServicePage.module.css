@@ -9,6 +9,7 @@
 }
 .subtitle {
   font-size: 20px;
+  color: #495057;
 }
 .filterContainer {
   margin-top: 20px;
@@ -24,4 +25,9 @@
   font-size: 16px;
   font-weight: 550;
   border-radius: 5px;
+}
+.selectedFilter {
+  color: white;
+  background-color: #e65ea2;
+  box-shadow: none;
 }
