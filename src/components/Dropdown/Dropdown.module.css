@@ -2,6 +2,7 @@
   position: relative;
   display: inline-block;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 .dropdownButton {
   padding: 10px 0px;
@@ -9,12 +10,17 @@
   box-shadow: inset 0 0 0 1px #ced4da;
   border-radius: 5px;
   cursor: pointer;
-  width: 100px;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 550;
   color: #495057;
+}
+.seletedDropdown {
+  color: white;
+  background-color: #e65ea2;
+  padding: 10px;
 }
 .dropdownMenu {
   position: absolute;
@@ -24,8 +30,9 @@
   z-index: 1;
 }
 .dropdownItem {
-  width: 100px;
+  width: 120px;
   padding: 5px;
+  padding-left: 15px;
   cursor: pointer;
 }
 .dropdownItem:hover {

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '@/components/Dropdown/Dropdown.module.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { RiArrowDropUpLine } from 'react-icons/ri';
+import clsx from 'clsx';
 
 const Dropdown = ({ options, name }: { options: string[]; name: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,13 @@ const Dropdown = ({ options, name }: { options: string[]; name: string }) => {
 
   return (
     <div className={styles.dropdown}>
-      <button className={styles.dropdownButton} onClick={toggleDropdown}>
+      <button
+        className={clsx(
+          styles.dropdownButton,
+          selectedOption && styles.seletedDropdown
+        )}
+        onClick={toggleDropdown}
+      >
         {selectedOption || `${name}`}
         {isOpen ? (
           <RiArrowDropUpLine className={styles.dropdownArrow} />

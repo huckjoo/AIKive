@@ -41,8 +41,11 @@ const AIServicePage = () => {
           })}
         </div>
         <div>
-          <Dropdown options={['무료', '부분유료', '유료']} name='요금' />
-          <Dropdown options={['해외', '국내']} name='국가' />
+          <Dropdown
+            options={['전체', '무료', '부분유료', '유료']}
+            name='요금'
+          />
+          <Dropdown options={['전체', '해외', '국내']} name='국가' />
         </div>
       </div>
     </div>
