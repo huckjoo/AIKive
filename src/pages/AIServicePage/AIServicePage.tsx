@@ -1,3 +1,4 @@
+import Dropdown from '@/components/Dropdown/Dropdown';
 import styles from '@/pages/AIServicePage/AIServicePage.module.css';
 import { useState } from 'react';
 
@@ -36,8 +37,8 @@ const AIServicePage = () => {
           })}
         </div>
         <div>
-          <button>요금 필터</button>
-          <button>국가 필터</button>
+          <Dropdown options={['무료', '부분유료', '유료']} name='요금' />
+          <Dropdown options={['해외', '국내']} name='국가' />
         </div>
       </div>
     </div>

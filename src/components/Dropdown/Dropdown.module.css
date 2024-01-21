@@ -1,0 +1,37 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+.dropdownButton {
+  padding: 10px 0px;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px #ced4da;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+  color: #495057;
+}
+.dropdownMenu {
+  position: absolute;
+  list-style: none;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px #ced4da;
+  z-index: 1;
+}
+.dropdownItem {
+  width: 100px;
+  padding: 5px;
+  cursor: pointer;
+}
+.dropdownItem:hover {
+  background-color: #ddd;
+}
+.dropdownArrow {
+  font-size: 27px;
+  margin-left: 10px;
+}
