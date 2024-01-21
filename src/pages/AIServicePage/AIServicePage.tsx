@@ -1,5 +1,6 @@
 import Dropdown from '@/components/Dropdown/Dropdown';
 import styles from '@/pages/AIServicePage/AIServicePage.module.css';
+import clsx from 'clsx';
 import { useState } from 'react';
 
 const AIServicePage = () => {
@@ -29,7 +30,10 @@ const AIServicePage = () => {
             return (
               <button
                 onClick={() => handleFilter(i)}
-                className={`${styles.filterButton} ${selectedIndex === i ? styles.selectedFilter : ''}`}
+                className={clsx(
+                  styles.filterButton,
+                  selectedIndex === i && styles.selectedFilter
+                )}
               >
                 {filterName}
               </button>

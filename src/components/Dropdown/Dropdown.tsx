@@ -3,7 +3,7 @@ import styles from '@/components/Dropdown/Dropdown.module.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { RiArrowDropUpLine } from 'react-icons/ri';
 
-const Dropdown = ({ options, name }) => {
+const Dropdown = ({ options, name }: { options: string[]; name: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
 
