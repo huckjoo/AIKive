@@ -17,7 +17,9 @@ const Dropdown = ({ options, name }: { options: string[]; name: string }) => {
   };
 
   const handleClickOutside = (e: MouseEvent) => {
-    const target = e.target as HTMLElement; // TODO 단언문 삭제
+    if (!(e.target instanceof HTMLElement)) return;
+
+    const target = e.target;
     if (dropdownRef.current && !dropdownRef.current.contains(target)) {
       setIsOpen(false);
     }
