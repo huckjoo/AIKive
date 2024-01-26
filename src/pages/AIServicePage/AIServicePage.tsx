@@ -1,3 +1,4 @@
+import Contents_Card from '@/components/Contents_Card/Contents_Card';
 import Dropdown from '@/components/Dropdown/Dropdown';
 import styles from '@/pages/AIServicePage/AIServicePage.module.css';
 import clsx from 'clsx';
@@ -48,6 +49,7 @@ const AIServicePage = () => {
           <Dropdown options={['전체국가', '해외', '국내']} name='국가' />
         </div>
       </div>
+      <Contents_Card />
     </div>
   );
 };
